@@ -197,6 +197,7 @@ require("bufferline").setup({
 		show_close_icon = true,
 		show_tab_indicators = false,
 		enforce_regular_tabs = true,
+		mode = "tabs",
 	},
 })
 
