@@ -2,3 +2,4 @@
 - neovim
 - fish
 - tmux
+- alacritty
