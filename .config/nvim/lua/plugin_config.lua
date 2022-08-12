@@ -2,8 +2,10 @@
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		section_separators = { left = "", right = "" },
-		component_separators = { left = "", right = "" },
+		--section_separators = { left = "薰ｴ", right = "薰ｶ" },
+		--component_separators = { left = "薰ｵ", right = "薰ｷ" },
+		section_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "" },
 		disabled_filetypes = {},
 	},
 	sections = {
@@ -20,7 +22,7 @@ require("lualine").setup({
 			{
 				"diagnostics",
 				sources = { "nvim_diagnostic" },
-				symbols = { error = "  ", warn = "  ", info = "  ", hint = "  " },
+				symbols = { error = " ・・", warn = " ・ｩ ", info = " ・・", hint = " ・ｵ " },
 			},
 			"encoding",
 			"filetype",
@@ -48,12 +50,12 @@ require("lualine").setup({
 
 ----- lspsaga.config -----
 require("lspsaga").setup({
-	error_sign = "",
-	warn_sign = "",
-	hint_sign = "",
-	infor_sign = "",
+	error_sign = "・・,
+	warn_sign = "・ｩ",
+	hint_sign = "・ｵ",
+	infor_sign = "・・,
 	border_style = "round",
-	code_action_icon = "● ",
+	code_action_icon = "笳・",
 	highlight_prefix = false,
 })
 
@@ -106,11 +108,14 @@ require("telescope").setup({
 				["<C-j>"] = require("telescope.actions").close,
 			},
 		},
+		file_ignore_patterns = {
+			"node_modules/",
+			".git/",
+			"target/",
+			"%.lock",
+		},
 	},
 })
-
------ file_browser.config -----
-require("telescope").load_extension("file_browser")
 
 ----- nvim-autopairs.config -----
 require("nvim-autopairs").setup({})
@@ -196,7 +201,6 @@ require("bufferline").setup({
 		show_buffer_close_icons = true,
 		show_close_icon = true,
 		show_tab_indicators = false,
-		enforce_regular_tabs = true,
 		mode = "tabs",
 	},
 })
@@ -229,11 +233,17 @@ require("trouble").setup({})
 require("rust-tools").setup({
 	tools = {
 		inlay_hints = {
-			parameter_hints_prefix = " ",
-			other_hints_prefix = " ",
+			parameter_hints_prefix = "・・",
+			other_hints_prefix = "・・",
 		},
 		hover_actions = {
 			auto_focus = true,
 		},
 	},
 })
+
+----- neogit.config -----
+require("neogit").setup({})
+
+----- lsp-colors.config -----
+require("lsp-colors").setup({})
