@@ -73,8 +73,21 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.close(),
 		["<Tab>"] = cmp.mapping.select_next_item(),
-		["<Up>"] = cmp.mapping.select_prev_item(),
 		["<Down>"] = cmp.mapping.select_next_item(),
+		["<Up>"] = function(fallback)
+			if cmp.get_active_entry() then
+				cmp.select_prev_item()
+			else
+				fallback()
+			end
+		end,
+		["<Down>"] = function(fallback)
+			if cmp.get_active_entry() then
+				cmp.select_next_item()
+			else
+				fallback()
+			end
+		end,
 		["<CR>"] = function(fallback)
 			if cmp.get_active_entry() then
 				cmp.confirm()
@@ -230,9 +243,12 @@ require("notify").setup({})
 require("sidebar-nvim").setup({
 	open = false,
 	hide_statusline = false,
-	side = "right",
+	side = "left",
 	sections = { "datetime", "files", "diagnostics", "git", "symbols" },
 	datetime = { format = "%a %b %d, %H:%M:%S", clocks = { { name = "Tokyo" } } },
+	files = {
+		show_hidden = true,
+	},
 })
 
 ----- indent_blankline.config -----
