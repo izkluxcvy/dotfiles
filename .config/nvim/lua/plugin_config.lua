@@ -60,21 +60,26 @@ require("lspsaga").setup({
 })
 
 ----- cmp.config -----
-require("cmp").setup({
+local cmp = require("cmp")
+cmp.setup({
 	snippet = {
 		expand = function(args)
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
 	mapping = {
-		["<C-d>"] = require("cmp").mapping.scroll_docs(-4),
-		["<C-f>"] = require("cmp").mapping.scroll_docs(4),
-		["<C-Space>"] = require("cmp").mapping.complete(),
-		["<C-e>"] = require("cmp").mapping.close(),
-		["<tab>"] = require("cmp").mapping.confirm({
-			behavior = require("cmp").ConfirmBehavior.Replace,
-			select = true,
-		}),
+		["<C-d>"] = cmp.mapping.scroll_docs(-4),
+		["<C-f>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-e>"] = cmp.mapping.close(),
+		["<tab>"] = cmp.mapping.select_next_item(),
+		["<CR>"] = function(fallback)
+			if cmp.get_active_entry() then
+				cmp.confirm()
+			else
+				fallback()
+			end
+		end,
 	},
 	sources = require("cmp").config.sources({
 		{ name = "nvim_lsp" },
