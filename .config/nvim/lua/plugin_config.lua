@@ -72,7 +72,9 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.close(),
-		["<tab>"] = cmp.mapping.select_next_item(),
+		["<Tab>"] = cmp.mapping.select_next_item(),
+		["<Up>"] = cmp.mapping.select_prev_item(),
+		["<Down>"] = cmp.mapping.select_next_item(),
 		["<CR>"] = function(fallback)
 			if cmp.get_active_entry() then
 				cmp.confirm()
