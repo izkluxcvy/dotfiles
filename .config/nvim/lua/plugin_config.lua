@@ -1,3 +1,4 @@
+local background_color = "#0f1c1e"
 ----- lualine.config -----
 require("lualine").setup({
 	options = {
@@ -203,6 +204,14 @@ require("bufferline").setup({
 		show_tab_indicators = false,
 		mode = "tabs",
 	},
+	highlights = {
+		background = { bg = background_color },
+		fill = { bg = background_color },
+		close_button = { bg = background_color },
+		close_button_visible = { bg = background_color },
+		separator = { bg = background_color },
+		separator_visible = { bg = background_color },
+	},
 })
 
 ----- alpha.config -----
@@ -254,3 +263,9 @@ require("gitsigns").setup({})
 
 ----- Comment.config
 require("Comment").setup()
+
+----- true-zen.config -----
+require("true-zen").setup({})
+
+----- colorizer.config
+require("colorizer").setup({})

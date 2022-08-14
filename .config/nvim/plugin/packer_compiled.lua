@@ -177,6 +177,11 @@ _G.packer_plugins = {
     path = "/home/matcha1024/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/matcha1024/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
+  },
   ["nvim-hlslens"] = {
     loaded = true,
     path = "/home/matcha1024/.local/share/nvim/site/pack/packer/start/nvim-hlslens",
@@ -251,6 +256,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/matcha1024/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
+  },
+  ["true-zen.nvim"] = {
+    loaded = true,
+    path = "/home/matcha1024/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,

@@ -19,19 +19,19 @@ set -Ux LS_COLORS (vivid generate nord)
 
 # Nightfox Color Palette
 
-# Style: nightfox
-# Upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/nightfox/nightfox_fish.fish
-set -l foreground cdcecf
-set -l selection 2b3b51
-set -l comment 738091
-set -l red c94f6d
-set -l orange f4a261
-set -l yellow dbc074
-set -l green 81b29a
-set -l purple 9d79d6
+# Style: terafox
+# Upstream: https://github.com/edeneast/nightfox.nvim/raw/main/extra/terafox/nightfox_fish.fish
+set -l foreground e6eaea
+set -l selection 293e40
+set -l comment 6d7f8b
+set -l red e85c51
+set -l orange ff8349
+set -l yellow fda47f
+set -l green 7aa4a1
+set -l purple ad5c7c
+set -l cyan a1cdd8
+set -l pink cb7985
 
-set -l cyan 63cdcf
-set -l pink d67ad2
 
 # Syntax Highlighting Colors
 set -g fish_color_normal $foreground
