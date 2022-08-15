@@ -29,7 +29,12 @@ set_keymap("i", "<C-j>", "<Esc>", opts)
 set_keymap("n", "<C-j>", "<Esc>", opts)
 set_keymap("n", "<space>x", "<cmd>TroubleToggle<CR>", opts)
 set_keymap("n", "<RightMouse>", "<LeftMouse><cmd>lua vim.lsp.buf.hover()<CR>", {})
-set_keymap("n", ";s", "<cmd>SidebarNvimToggle<CR><cmd>SidebarNvimFocus<CR>", opts)
+set_keymap(
+	"n",
+	";s",
+	"<cmd>if stridx(@%, 'SidebarNvim') == -1<CR>SidebarNvimFocus<CR>else<CR>SidebarNvimClose<CR>endif<CR>",
+	opts
+)
 set_keymap("n", "n", [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
 set_keymap("n", "N", [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]], opts)
 set_keymap("n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], opts)
