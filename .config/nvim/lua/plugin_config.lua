@@ -73,7 +73,6 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
 		["<C-e>"] = cmp.mapping.close(),
 		["<Tab>"] = cmp.mapping.select_next_item(),
-		["<Down>"] = cmp.mapping.select_next_item(),
 		["<Up>"] = function(fallback)
 			if cmp.get_active_entry() then
 				cmp.select_prev_item()
@@ -142,14 +141,20 @@ require("nvim-autopairs").setup({})
 
 ----- toggleterm.config -----
 require("toggleterm").setup({
-	size = 15,
+	size = function(term)
+		if term.direction == "horizontal" then
+			return vim.o.lines * 0.25
+		elseif term.direction == "vertical" then
+			return vim.o.columns * 0.35
+		end
+	end,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true, -- hide the number column in toggleterm buffers
 	shade_terminals = true,
 	start_in_insert = true,
-	insert_mappings = true, -- whether or not the open mapping applies in insert mode
+	insert_mappings = false, -- whether or not the open mapping applies in insert mode
 	terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
-	persist_size = true,
+	persist_size = false,
 	direction = "horizontal",
 	float_opts = {
 		border = "curved",
@@ -230,6 +235,8 @@ require("bufferline").setup({
 		close_button_visible = { bg = background_color },
 		separator = { bg = background_color },
 		separator_visible = { bg = background_color },
+		buffer_visible = { bg = background_color },
+		tab = { bg = background_color },
 	},
 })
 
@@ -275,7 +282,9 @@ require("rust-tools").setup({
 })
 
 ----- neogit.config -----
-require("neogit").setup({})
+require("neogit").setup({
+	kind = "split",
+})
 
 ----- lsp-colors.config -----
 require("lsp-colors").setup({})
