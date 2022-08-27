@@ -171,6 +171,7 @@ local null_ls = require("null-ls")
 mason.setup({})
 
 local null_sources = {}
+table.insert(null_sources, null_ls.builtins.formatting["rustfmt"]) -- rustfmt
 
 for _, package in ipairs(mason_registry.get_installed_packages()) do
 	local package_categories = package.spec.categories[1]
