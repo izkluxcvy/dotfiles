@@ -88,7 +88,7 @@ cmp.setup({
 			end
 		end,
 		["<CR>"] = function(fallback)
-			if cmp.get_active_entry() then
+			if cmp.get_selected_entry() then
 				cmp.confirm()
 			else
 				fallback()
@@ -99,11 +99,25 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 	}, {
 		{ name = "buffer" },
+	}, {
+		{ name = "path" },
 	}),
 	formatting = {
 		format = require("lspkind").cmp_format({ with_text = false, maxwidth = 50 }),
 	},
+
+	preselect = cmp.PreselectMode.None,
 })
+
+cmp.setup.cmdline(":", {
+	mapping = cmp.mapping.preset.cmdline(),
+	sources = cmp.config.sources({
+		{ name = "path" },
+	}, {
+		{ name = "cmdline" },
+	}),
+})
+
 vim.cmd([[highlight! default link CmpItemKind CmpItemMenuDefault]])
 
 ----- nvim-treesitter.config -----
@@ -206,6 +220,14 @@ require("mason-lspconfig").setup_handlers({
 	function(server_name)
 		require("lspconfig")[server_name].setup({})
 	end,
+})
+
+require("lspconfig").rust_analyzer.setup({
+	["rust-analyzer"] = {
+		checkOnSave = {
+			command = "clippy",
+		},
+	},
 })
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
