@@ -1,15 +1,7 @@
-require("plugins")
-require("plugin_config")
-require("keymap")
+require("util")
+require("options")
 
-vim.opt.cursorline = true
-vim.opt.number = true
-vim.opt.tabstop = 4
-vim.cmd("colorscheme terafox")
-vim.notify = require("notify")
-vim.cmd("set mouse=nv")
-vim.cmd("hi DiagnosticVirtualTextError guibg=dark")
-vim.cmd("hi DiagnosticVirtualTextHint guibg=dark")
-vim.cmd("hi DiagnosticVirtualTextWarn guibg=dark")
-vim.cmd("hi DiagnosticVirtualTextInfo guibg=dark")
-vim.opt.pumblend = 15
+-- no need to load this immediately, since we have packer_compiled
+vim.defer_fn(function()
+  require("plugins")
+end, 0)
