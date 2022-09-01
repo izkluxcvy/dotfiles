@@ -2,6 +2,7 @@ local cmd = vim.cmd
 local indent = 4
 vim.opt.cursorline = true -- Enable highlighting of the current line
 vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.cmdheight = 0
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- TreeSitter folding
 -- vim.opt.foldlevel = 6
 -- vim.opt.foldmethod = "expr" -- TreeSitter folding
@@ -37,48 +38,23 @@ vim.opt.wrap = false -- Disable line wrap
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
 -- vim.o.shortmess = "IToOlxfitn"
 
--- don't load the plugins below
-local builtins = {
-    "gzip",
-    "zip",
-    "zipPlugin",
-    "fzf",
-    "tar",
-    "tarPlugin",
-    "getscript",
-    "getscriptPlugin",
-    "vimball",
-    "vimballPlugin",
-    "2html_plugin",
-    "matchit",
-    "matchparen",
-    "logiPat",
-    "rrhelper",
-    "netrw",
-    "netrwPlugin",
-    "netrwSettings",
-    "netrwFileHandlers",
-}
-
-for _, plugin in ipairs(builtins) do
-    vim.g["loaded_" .. plugin] = 1
-end
-
--- Use proper syntax highlighting in code blocks
-local fences = {
-    "lua",
-    -- "vim",
-    "json",
-    "typescript",
-    "javascript",
-    "js=javascript",
-    "ts=typescript",
-    "shell=sh",
-    "python",
-    "sh",
-    "console=sh",
-}
-vim.g.markdown_fenced_languages = fences
+vim.g.did_install_default_menus = 1
+vim.g.did_install_syntax_menu = 1
+vim.g.did_indent_on = 1
+vim.g.did_load_ftplugin = 1
+vim.g.loaded_2html_plugin = 1
+vim.g.loaded_gzip = 1
+vim.g.loaded_man = 1
+vim.g.loaded_matchit = 1
+vim.g.loaded_matchparen = 1
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_remote_plugins = 1
+vim.g.loaded_shada_plugin = 1
+vim.g.loaded_spellfile_plugin = 1
+vim.g.loaded_tarPlugin = 1
+vim.g.loaded_tutor_mode_plugin = 1
+vim.g.loaded_zipPlugin = 1
+vim.g.skip_loading_mswin = 1
 
 -- plasticboy/vim-markdown
 vim.g.vim_markdown_folding_level = 10
