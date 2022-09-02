@@ -4,89 +4,89 @@ times in msec
  clock   self+sourced   self:  sourced script
  clock   elapsed:              other lines
 
-000.023  000.023: --- NVIM STARTING ---
-000.132  000.108: event init
-000.213  000.081: early init
-000.345  000.132: locale set
-000.425  000.080: init first window
-000.687  000.262: inits 1
-000.697  000.010: window checked
-000.699  000.002: parsing arguments
-001.007  000.050  000.050: require('vim.shared')
-001.098  000.042  000.042: require('vim._meta')
-001.100  000.089  000.047: require('vim._editor')
-001.101  000.161  000.023: require('vim._init_packages')
-001.102  000.242: init lua interpreter
-001.127  000.025: expanding arguments
-001.156  000.029: inits 2
-001.372  000.216: init highlight
-001.373  000.001: waiting for UI
-002.023  000.650: done waiting for UI
-002.028  000.005: init screen for UI
-002.147  000.118: init default mappings
-002.160  000.014: init default autocommands
-002.476  000.042  000.042: sourcing /usr/share/nvim/runtime/ftplugin.vim
-002.523  000.022  000.022: sourcing /usr/share/nvim/runtime/indent.vim
-002.711  000.148  000.148: require('util')
-004.032  001.319  001.319: require('options')
-004.401  000.367  000.367: require('config.keys')
-004.411  001.865  000.031: sourcing /home/matcha1024/.config/nvim/init.lua
-004.418  000.329: sourcing vimrc file(s)
-004.576  000.121  000.121: sourcing /usr/share/nvim/runtime/filetype.lua
-004.597  000.010  000.010: sourcing /usr/share/nvim/runtime/filetype.vim
-004.713  000.067  000.067: sourcing /usr/share/nvim/runtime/syntax/synload.vim
-004.789  000.178  000.111: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
-004.929  000.004  000.004: require('vim.F')
-005.179  000.013  000.013: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
-005.194  000.007  000.007: sourcing /usr/share/nvim/runtime/plugin/health.vim
-005.205  000.005  000.005: sourcing /usr/share/nvim/runtime/plugin/man.vim
-005.218  000.007  000.007: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
-005.230  000.008  000.008: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
-005.249  000.013  000.013: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
-005.259  000.004  000.004: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
-005.269  000.004  000.004: sourcing /usr/share/nvim/runtime/plugin/shada.vim
-005.280  000.006  000.006: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
-005.295  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
-005.306  000.006  000.006: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
-005.317  000.005  000.005: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
-005.333  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
-006.498  000.265  000.265: require('dashboard')
-006.519  000.646  000.381: require('config.dashboard')
-007.214  000.319  000.319: require('tokyonight.hsluv')
-007.220  000.506  000.187: require('tokyonight.util')
-007.691  000.067  000.067: require('tokyonight.colors')
-007.694  000.472  000.405: require('tokyonight.theme')
-007.695  001.009  000.031: require('tokyonight')
-007.774  000.078  000.078: require('tokyonight.config')
-008.673  000.726  000.726: require('vim.diagnostic')
-013.310  006.785  004.972: require('config.theme')
-014.136  000.097  000.097: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim
-014.163  008.793  001.264: sourcing /home/matcha1024/.config/nvim/plugin/packer_compiled.lua
-014.297  000.673: loading rtp plugins
-014.527  000.077  000.077: require('dashboard.session')
-014.536  000.148  000.071: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/start/dashboard-nvim/plugin/dashboard.lua
-014.640  000.194: loading packages
-014.642  000.002: loading after plugins
-014.652  000.011: inits 3
-017.179  002.527: reading ShaDa
-017.327  000.148: opening buffers
-017.329  000.002: BufEnter autocommands
-017.331  000.002: editing files in windows
-017.490  000.139  000.139: require('packer.load')
-018.006  000.069  000.069: require('vim.ui')
-018.011  000.111  000.042: require('dressing.patch')
-018.012  000.405  000.293: require('dressing')
-018.021  000.424  000.019: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/opt/dressing.nvim/plugin/dressing.lua
-018.249  000.037  000.037: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons/plugin/nvim-web-devicons.vim
-019.104  000.780  000.780: require('nvim-web-devicons')
-022.822  000.079  000.079: require('lualine_require')
-023.030  000.618  000.539: require('lualine')
-024.510  000.050  000.050: require('lualine.utils.mode')
-025.642  003.515  002.847: require('config.lualine')
-027.274  000.112  000.112: require('dashboard.preview')
-027.277  000.239  000.127: require('dashboard.events')
-027.319  004.854: VimEnter autocommands
-027.321  000.002: UIEnter autocommands
-027.323  000.002: before starting main loop
-027.671  000.349: first screen update
-027.674  000.002: --- NVIM STARTED ---
+000.004  000.004: --- NVIM STARTING ---
+000.169  000.165: event init
+000.335  000.166: early init
+000.439  000.103: locale set
+000.460  000.021: init first window
+000.651  000.191: inits 1
+000.660  000.008: window checked
+000.661  000.001: parsing arguments
+000.952  000.033  000.033: require('vim.shared')
+001.050  000.042  000.042: require('vim._meta')
+001.053  000.099  000.057: require('vim._editor')
+001.054  000.155  000.022: require('vim._init_packages')
+001.055  000.240: init lua interpreter
+001.189  000.134: expanding arguments
+001.220  000.030: inits 2
+001.473  000.254: init highlight
+001.475  000.002: waiting for UI
+002.072  000.596: done waiting for UI
+002.082  000.011: init screen for UI
+002.228  000.146: init default mappings
+002.249  000.021: init default autocommands
+002.587  000.048  000.048: sourcing /usr/share/nvim/runtime/ftplugin.vim
+002.635  000.022  000.022: sourcing /usr/share/nvim/runtime/indent.vim
+002.888  000.202  000.202: require('util')
+004.363  001.472  001.472: require('options')
+004.621  000.256  000.256: require('config.keys')
+004.628  001.968  000.037: sourcing /home/matcha1024/.config/nvim/init.lua
+004.634  000.348: sourcing vimrc file(s)
+004.784  000.116  000.116: sourcing /usr/share/nvim/runtime/filetype.lua
+004.805  000.010  000.010: sourcing /usr/share/nvim/runtime/filetype.vim
+004.922  000.068  000.068: sourcing /usr/share/nvim/runtime/syntax/synload.vim
+005.002  000.183  000.115: sourcing /usr/share/nvim/runtime/syntax/syntax.vim
+005.159  000.005  000.005: require('vim.F')
+005.469  000.013  000.013: sourcing /usr/share/nvim/runtime/plugin/gzip.vim
+005.484  000.007  000.007: sourcing /usr/share/nvim/runtime/plugin/health.vim
+005.495  000.005  000.005: sourcing /usr/share/nvim/runtime/plugin/man.vim
+005.508  000.007  000.007: sourcing /usr/share/nvim/runtime/plugin/matchit.vim
+005.521  000.008  000.008: sourcing /usr/share/nvim/runtime/plugin/matchparen.vim
+005.539  000.012  000.012: sourcing /usr/share/nvim/runtime/plugin/netrwPlugin.vim
+005.550  000.005  000.005: sourcing /usr/share/nvim/runtime/plugin/rplugin.vim
+005.559  000.004  000.004: sourcing /usr/share/nvim/runtime/plugin/shada.vim
+005.571  000.006  000.006: sourcing /usr/share/nvim/runtime/plugin/spellfile.vim
+005.586  000.010  000.010: sourcing /usr/share/nvim/runtime/plugin/tarPlugin.vim
+005.597  000.006  000.006: sourcing /usr/share/nvim/runtime/plugin/tohtml.vim
+005.608  000.005  000.005: sourcing /usr/share/nvim/runtime/plugin/tutor.vim
+005.625  000.011  000.011: sourcing /usr/share/nvim/runtime/plugin/zipPlugin.vim
+006.718  000.266  000.266: require('dashboard')
+006.738  000.564  000.298: require('config.dashboard')
+007.451  000.333  000.333: require('tokyonight.hsluv')
+007.456  000.518  000.185: require('tokyonight.util')
+007.866  000.060  000.060: require('tokyonight.colors')
+007.868  000.411  000.351: require('tokyonight.theme')
+007.869  000.961  000.032: require('tokyonight')
+007.967  000.097  000.097: require('tokyonight.config')
+008.883  000.713  000.713: require('vim.diagnostic')
+013.246  006.505  004.735: require('config.theme')
+013.749  000.045  000.045: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/opt/vim-markdown/ftdetect/markdown.vim
+013.768  008.107  000.992: sourcing /home/matcha1024/.config/nvim/plugin/packer_compiled.lua
+013.906  000.753: loading rtp plugins
+014.146  000.090  000.090: require('dashboard.session')
+014.157  000.161  000.071: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/start/dashboard-nvim/plugin/dashboard.lua
+014.269  000.202: loading packages
+014.271  000.002: loading after plugins
+014.282  000.011: inits 3
+016.291  002.009: reading ShaDa
+016.592  000.301: opening buffers
+016.595  000.003: BufEnter autocommands
+016.597  000.002: editing files in windows
+016.739  000.122  000.122: require('packer.load')
+017.252  000.049  000.049: require('vim.ui')
+017.256  000.097  000.048: require('dressing.patch')
+017.258  000.403  000.306: require('dressing')
+017.266  000.421  000.018: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/opt/dressing.nvim/plugin/dressing.lua
+017.450  000.033  000.033: sourcing /home/matcha1024/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons/plugin/nvim-web-devicons.vim
+018.285  000.758  000.758: require('nvim-web-devicons')
+021.922  000.067  000.067: require('lualine_require')
+022.106  000.538  000.471: require('lualine')
+023.616  000.046  000.046: require('lualine.utils.mode')
+024.810  003.532  002.948: require('config.lualine')
+027.238  000.261  000.261: require('dashboard.preview')
+027.244  000.590  000.329: require('dashboard.events')
+027.309  005.256: VimEnter autocommands
+027.311  000.002: UIEnter autocommands
+027.313  000.001: before starting main loop
+027.777  000.465: first screen update
+027.780  000.002: --- NVIM STARTED ---

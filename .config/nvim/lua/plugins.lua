@@ -421,6 +421,22 @@ local function plugins(use)
 			vim.g.matchup_matchparen_offscreen = { method = "status_manual" }
 		end,
 	})
+
+	use({
+		"nathom/filetype.nvim",
+		opt = false,
+		config = function()
+			require("config.filetype")
+		end,
+	})
+
+	use({
+		"lewis6991/impatient.nvim",
+		opt = false,
+		config = function()
+			require("impatient")
+		end,
+	})
 end
 
 return packer.setup(config, plugins)

@@ -55,6 +55,7 @@ vim.g.loaded_tarPlugin = 1
 vim.g.loaded_tutor_mode_plugin = 1
 vim.g.loaded_zipPlugin = 1
 vim.g.skip_loading_mswin = 1
+vim.g.did_load_filetypes = 1
 
 -- plasticboy/vim-markdown
 vim.g.vim_markdown_folding_level = 10
