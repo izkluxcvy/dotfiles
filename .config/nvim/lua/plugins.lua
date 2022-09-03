@@ -19,7 +19,6 @@ local config = {
 local function plugins(use)
 	-- Packer can manage itself as an optional plugin
 	use({ "wbthomason/packer.nvim" })
-	use({ "stevearc/dressing.nvim", event = "VimEnter" })
 	use({
 		"rcarriga/nvim-notify",
 		after = "mason.nvim",
@@ -172,7 +171,8 @@ local function plugins(use)
 	--
 	use({
 		"folke/tokyonight.nvim",
-		opt = false,
+		-- opt = false,
+		event = "VimEnter",
 		config = function()
 			require("config.theme")
 		end,
@@ -310,7 +310,8 @@ local function plugins(use)
 	-- Statusline
 	use({
 		"nvim-lualine/lualine.nvim",
-		event = "VimEnter",
+		-- event = "VimEnter",
+		after = "mason.nvim",
 		config = [[require('config.lualine')]],
 		wants = "nvim-web-devicons",
 	})
@@ -324,20 +325,6 @@ local function plugins(use)
 	})
 
 	use({ "npxbr/glow.nvim", cmd = "Glow" })
-
-	use({
-		"plasticboy/vim-markdown",
-		requires = "godlygeek/tabular",
-		ft = "markdown",
-	})
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-		ft = "markdown",
-		cmd = { "MarkdownPreview" },
-	})
 
 	-- use { "tjdevries/train.nvim", cmd = { "TrainClear", "TrainTextObj", "TrainUpDown", "TrainWord" } }
 
