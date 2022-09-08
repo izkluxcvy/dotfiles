@@ -6,7 +6,7 @@ vim.opt.cmdheight = 0
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- TreeSitter folding
 -- vim.opt.foldlevel = 6
 -- vim.opt.foldmethod = "expr" -- TreeSitter folding
-vim.opt.guifont = "FiraCode Nerd Font:h12"
+vim.opt.guifont = "FuraCode Nerd Font:h12"
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.hidden = true -- Enable modified buffers in background
@@ -36,6 +36,7 @@ vim.opt.updatetime = 200 -- save swap file and trigger CursorHold
 vim.opt.wildmode = "longest:full,full" -- Command-line completion mode
 vim.opt.wrap = false -- Disable line wrap
 vim.opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize" }
+vim.opt.laststatus = 3
 -- vim.o.shortmess = "IToOlxfitn"
 
 vim.g.did_install_default_menus = 1

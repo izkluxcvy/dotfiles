@@ -4,6 +4,9 @@ require("telescope").setup({
             n = {
                 ["<C-j>"] = require("telescope.actions").close,
             },
+            i = {
+                ["<C-j>"] = require("telescope.actions").close,
+            },
         },
         file_ignore_patterns = {
             "node_modules/",

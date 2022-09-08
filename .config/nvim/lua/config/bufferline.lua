@@ -19,8 +19,8 @@ require("bufferline").setup({
         mode = "tabs",
         show_close_icon = true,
         diagnostics = "nvim_lsp",
-        always_show_bufferline = true,
-        separator_style = "thick",
+        always_show_bufferline = false,
+        -- separator_style = "thin",
         diagnostics_indicator = function(_, _, diag)
             local s = {}
             for _, severity in ipairs(severities) do
