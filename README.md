@@ -3,3 +3,4 @@
 - fish
 - tmux
 - alacritty
+- wezterm
