@@ -421,14 +421,6 @@ local function plugins(use)
 			require("config.filetype")
 		end,
 	})
-
-	use({
-		"lewis6991/impatient.nvim",
-		opt = false,
-		config = function()
-			require("impatient")
-		end,
-	})
 end
 
 return packer.setup(config, plugins)
