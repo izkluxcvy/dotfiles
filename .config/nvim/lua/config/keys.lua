@@ -2,7 +2,6 @@ local util = require("util")
 
 vim.o.timeoutlen = 300
 
-
 -- Escape
 util.nnoremap("<C-j>", "<ESC>")
 util.inoremap("<C-j>", "<ESC>")
@@ -10,8 +9,8 @@ util.vnoremap("<C-j>", "<ESC>")
 
 -- Plugins
 util.nnoremap(
-    ";s",
-    "<cmd>if stridx(@%, 'SidebarNvim') == -1<CR>SidebarNvimFocus<CR>else<CR>SidebarNvimClose<CR>endif<CR>"
+	";s",
+	"<cmd>if stridx(@%, 'SidebarNvim') == -1<CR>SidebarNvimFocus<CR>else<CR>SidebarNvimClose<CR>endif<CR>"
 )
 util.nnoremap(";w", "<cmd>bdelete<CR>")
 util.nnoremap(";t", "<cmd>tabnew<CR>")
@@ -53,9 +52,8 @@ util.vnoremap("<", "<gv")
 util.vnoremap(">", ">gv")
 
 util.nnoremap("<space>cu", function()
-    local number = math.random(math.pow(2, 127) + 1, math.pow(2, 128))
-    return "i" .. string.format("%.0f", number)
+	local number = math.random(math.pow(2, 127) + 1, math.pow(2, 128))
+	return "i" .. string.format("%.0f", number)
 end, {
-    expr = true,
+	expr = true,
 })
-

@@ -76,11 +76,13 @@ local function plugins(use)
 	use({
 		"simrat39/rust-tools.nvim",
 		-- ft = { "rust" },
-		-- after = "nvim-lspconfig",
-		-- module = "rust-tools",
-		-- config = function()
-		-- 	require("config.rust")
-		-- end,
+		after = "nvim-lspconfig",
+		module = "rust-tools",
+		config = function()
+			if vim.bo.filetype == "rust" then
+				require("config.rust")
+			end
+		end,
 	})
 
 	use({ "kazhala/close-buffers.nvim", cmd = "BDelete" })
