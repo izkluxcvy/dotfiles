@@ -6,7 +6,7 @@ vim.opt.cmdheight = 0
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- TreeSitter folding
 -- vim.opt.foldlevel = 6
 -- vim.opt.foldmethod = "expr" -- TreeSitter folding
-vim.opt.guifont = "FuraCode Nerd Font:h12"
+-- vim.opt.guifont = "FuraCode Nerd Font:h12"
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.hidden = true -- Enable modified buffers in background
@@ -59,12 +59,12 @@ vim.g.skip_loading_mswin = 1
 vim.g.did_load_filetypes = 1
 
 -- plasticboy/vim-markdown
-vim.g.vim_markdown_folding_level = 10
-vim.g.vim_markdown_fenced_languages = fences
-vim.g.vim_markdown_folding_style_pythonic = 1
-vim.g.vim_markdown_conceal_code_blocks = 0
-vim.g.vim_markdown_frontmatter = 1
-vim.g.vim_markdown_strikethrough = 1
+-- vim.g.vim_markdown_folding_level = 10
+-- vim.g.vim_markdown_fenced_languages = fences
+-- vim.g.vim_markdown_folding_style_pythonic = 1
+-- vim.g.vim_markdown_conceal_code_blocks = 0
+-- vim.g.vim_markdown_frontmatter = 1
+-- vim.g.vim_markdown_strikethrough = 1
 
 vim.cmd([[autocmd FileType markdown nnoremap gO <cmd>Toc<cr>]])
 vim.cmd([[autocmd FileType markdown setlocal spell]])
@@ -89,3 +89,9 @@ cmd("au TextYankPost * lua vim.highlight.on_yank {}")
 -- windows to close with "q"
 vim.cmd([[autocmd FileType help,startuptime,qf,lspinfo nnoremap <buffer><silent> q :close<CR>]])
 vim.cmd([[autocmd FileType man nnoremap <buffer><silent> q :quit<CR>]])
+
+-- Hide on cmdmode
+cmd([[
+    autocmd CmdlineEnter * set laststatus=0
+    autocmd CmdlineLeave * set laststatus=3
+]])
