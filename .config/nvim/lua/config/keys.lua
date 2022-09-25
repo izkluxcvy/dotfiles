@@ -57,3 +57,5 @@ util.nnoremap("<space>cu", function()
 end, {
 	expr = true,
 })
+
+util.nnoremap("K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)

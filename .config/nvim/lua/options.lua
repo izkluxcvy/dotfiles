@@ -2,7 +2,7 @@ local cmd = vim.cmd
 local indent = 4
 vim.opt.cursorline = true -- Enable highlighting of the current line
 vim.opt.expandtab = true -- Use spaces instead of tabs
-vim.opt.cmdheight = 0
+vim.opt.cmdheight = 1
 -- vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- TreeSitter folding
 -- vim.opt.foldlevel = 6
 -- vim.opt.foldmethod = "expr" -- TreeSitter folding
@@ -89,9 +89,3 @@ cmd("au TextYankPost * lua vim.highlight.on_yank {}")
 -- windows to close with "q"
 vim.cmd([[autocmd FileType help,startuptime,qf,lspinfo nnoremap <buffer><silent> q :close<CR>]])
 vim.cmd([[autocmd FileType man nnoremap <buffer><silent> q :quit<CR>]])
-
--- Hide on cmdmode
-cmd([[
-    autocmd CmdlineEnter * set laststatus=0
-    autocmd CmdlineLeave * set laststatus=3
-]])
