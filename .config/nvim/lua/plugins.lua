@@ -167,15 +167,6 @@ local function plugins(use)
 	})
 
 	-- Theme: color schemes
-	-- use({
-	--     "jayden-chan/base46.nvim",
-	--     opt = false,
-	--     -- event = "VimEnter",
-	--     config = function()
-	--         require("config.theme")
-	--     end,
-	-- })
-	--
 	use({
 		"folke/tokyonight.nvim",
 		-- opt = false,
@@ -184,7 +175,6 @@ local function plugins(use)
 			require("config.theme")
 		end,
 	})
-
 	-- Theme: icons
 	use({
 		"kyazdani42/nvim-web-devicons",
