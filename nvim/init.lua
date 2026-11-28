@@ -273,8 +273,38 @@ require("barbar").setup{
 			enabled = false,
 		},
         button = false,
+        separator = { left = '', right = '' },
+        inactive = {
+            separator = { left = '', right = '' },
+        }
 	}
 }
+local function barbar_preferences()
+	local normal = vim.api.nvim_get_hl(0, { name = 'Normal', link = false })
+	for name, _ in pairs(vim.api.nvim_get_hl(0, {})) do
+		if name:match('^BufferInactive')
+			or name:match('^BufferTabpage')
+			or name == 'BufferOffset'
+		then
+			local hl = vim.api.nvim_get_hl(0, { name = name, link = false })
+			hl.bg = normal.bg
+			hl.ctermbg = normal.ctermbg
+			hl.default = nil
+			vim.api.nvim_set_hl(0, name, hl)
+		end
+	end
+
+    for _, name in ipairs({ 'BufferCurrent', 'BufferCurrentMod' }) do
+		local hl = vim.api.nvim_get_hl(0, { name = name, link = false })
+		hl.bold = true
+		hl.default = nil
+		vim.api.nvim_set_hl(0, name, hl)
+	end
+end
+barbar_preferences()
+vim.api.nvim_create_autocmd('ColorScheme', {
+	callback = function() vim.schedule(barbar_preferences) end,
+})
 
 -- keymaps
 vim.keymap.set("n", "<C-_>", "<cmd>ToggleTerm<CR>")
